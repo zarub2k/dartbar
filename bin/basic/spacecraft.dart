@@ -11,9 +11,9 @@ class Spacecraft {
   void describe() {
     print('Spacecraft: $name');
     if (launchDate == null) {
-      print('Spacecraft is not launched yet');
+      print('Spacecraft $name is not launched yet');
     } else {
-      print('Spacecraft is launched on $launchDate');
+      print('Spacecraft $name is launched on $launchDate');
     }
   }
 }
@@ -21,4 +21,7 @@ class Spacecraft {
 void main(List<String> arguments) {
   var voyager1 = Spacecraft('Voyager I', DateTime(2021, 6, 12));
   voyager1.describe();
+
+  var voyager3 = Spacecraft.unlaunched('Voyager III');
+  voyager3.describe();
 }
