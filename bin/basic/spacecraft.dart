@@ -2,6 +2,8 @@ class Spacecraft {
   String name;
   DateTime? launchDate;
 
+  late String overview;
+
   //Constructor with syntactic sugar
   Spacecraft(this.name, this.launchDate);
 
@@ -10,6 +12,7 @@ class Spacecraft {
   
   void describe() {
     print('Spacecraft: $name');
+    // print(overview);
     if (launchDate == null) {
       print('Spacecraft $name is not launched yet');
     } else {
