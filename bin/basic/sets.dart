@@ -1,5 +1,49 @@
 void main(List<String> arguments) {
-  emptySet();
+  forSet();
+}
+
+void forSet() {
+  var fruits = {
+    'Banana',
+    'Apple',
+    'Mango'
+  };
+
+  var allSeasons = {
+    ...fruits,
+    for (var i in fruits) '##$i##'
+  };
+  print(allSeasons);
+}
+
+void ifSet() {
+  var fruits = {
+    'Banana',
+    'Apple',
+    'Mango'
+  };
+
+  var isSummer = false;
+
+  var summerFruits = {
+    ...fruits,
+    if (isSummer) 'Watermelon'
+  };
+  print(summerFruits);
+}
+
+void spreadSet() {
+  var fruits = {
+    'Banana',
+    'Apple',
+    'Mango'
+  };
+
+  var moreFruits = {
+    'Guava',
+    ...fruits
+  };
+  print(moreFruits);
 }
 
 void emptySet() {
