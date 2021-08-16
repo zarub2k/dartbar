@@ -1,10 +1,11 @@
 void main(List<String> args) {
   print('### Functions ###');
-  anonymousFn('Tham');
+  anonymousFn();
 }
 
-void anonymousFn(String name) {
-  print(upper(name));
+void anonymousFn() {
+  var names = ['Tham', 'Roger', 'Joko'];
+  names.forEach((name) => print(upper(name)));
 }
 
 var upper = (String value) => value.toUpperCase();
