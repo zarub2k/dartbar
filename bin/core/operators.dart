@@ -1,6 +1,16 @@
 void main(List<String> args) {
   print('### Operators ###');
-  arithmeticOp(6, 3);
+  incrementAndDecrement(2, 3);
+}
+
+void incrementAndDecrement(int a, int b) {
+  print('$a++ = ${a++}');
+  print(a);
+  print('++$a = ${++a}');
+
+  print('--$b = ${--b}');
+  print('$b-- = ${b--}');
+  print(b);
 }
 
 void arithmeticOp(int a, int b) {
