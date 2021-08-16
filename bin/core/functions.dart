@@ -1,6 +1,29 @@
 void main(List<String> args) {
   print('### Functions ###');
-  positionalWithDefault('Thamizh');
+  anonymousFn('Tham');
+}
+
+void anonymousFn(String name) {
+  print(upper(name));
+}
+
+var upper = (String value) => value.toUpperCase();
+
+void firstClassObjects() {
+  var values = List.generate(5, (index) => index + 1);
+  values.forEach(arrowPrint);
+  // values.forEach((value) { arrowPrint(value);});
+}
+
+void arrowPrint(int value) {
+  var arrows = '';
+  var count = 0;
+  do {
+    arrows += '>';
+    count++;
+  } while (count < value);
+
+  print(arrows);
 }
 
 void positionalWithDefault(String name, [String? title = 'Mr.']) {
