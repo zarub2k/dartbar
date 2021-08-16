@@ -1,13 +1,6 @@
 void main(List<String> args) {
   print('### Functions ###');
   positionalWithDefault('Thamizh');
-
-  // var result = isOdd(value: 3);
-  // print(result);
-
-  // namedWithDefault(value: 11);
-  // positionalParams('Tham', 42);
-  // positionalParams('Thamizh', 42, 'Mr.');
 }
 
 void positionalWithDefault(String name, [String? title = 'Mr.']) {
