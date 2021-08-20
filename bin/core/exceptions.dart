@@ -1,6 +1,16 @@
 void main(List<String> args) {
   print('### Exception examples ###');
-  catchRethrowFn();
+  finallyFn();
+}
+
+void finallyFn() {
+  try {
+    simulator();
+  } catch (e) {
+    print('Inside catch');
+  } finally {
+    print('Inside finally');
+  }
 }
 
 void catchRethrowFn() {
@@ -43,6 +53,37 @@ void catchMore() {
   } catch (e) {
     print('Catch handler');
   }
+}
+
+void catchFn() {
+  print('catchFn()');
+  // Model 1
+  try {
+    simulator();
+  } on NoSuchMethodError {
+    print('error on model 1');
+  }
+
+  // Model 2
+  try {
+    simulator();
+  } on NoSuchMethodError catch (e) {
+    print('error on model 2');
+    print(e);
+  }
+
+  // Model 3
+  try {
+    simulator();
+  } catch (e) {
+    print('error on model 3');
+    print(e);
+  }
+}
+
+void simulator() {
+  dynamic value = true;
+  print(value++);
 }
 
 void tryCatchOn() {
