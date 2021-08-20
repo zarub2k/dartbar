@@ -1,11 +1,53 @@
 void main(List<String> args) {
   print('### Exception examples ###');
-  tryCatchOn();
+  catchRethrowFn();
+}
+
+void catchRethrowFn() {
+  try {
+    rethrowFn();
+  } catch (e) {
+    print('Caught inside catchRethrowFn()');
+  }
+}
+
+void rethrowFn() {
+  try {
+    dynamic value = true;
+    print(value++);
+  } catch (e) {
+    print('Something weird happened');
+    rethrow;
+  }
+}
+
+void catchStackTrace() {
+  try {
+    dynamic value = true;
+    print(value++);
+  } catch (e, s) {
+    print(e);
+    print('#############');
+    print(s);
+  }
+}
+
+void catchMore() {
+  try {
+    throwKnown();
+  } on FormatException {
+    print('On exception handler');
+  } on Exception catch (e) {
+    print('On with catch exception handler');
+    print(e);
+  } catch (e) {
+    print('Catch handler');
+  }
 }
 
 void tryCatchOn() {
   try {
-    exception();
+    throwKnown();
   } on FormatException catch (e) {
     print('tryCatchOn()');
     print(e);
@@ -14,7 +56,7 @@ void tryCatchOn() {
 
 void tryCatch() {
   try {
-    exception();
+    throwKnown();
   } catch (e) {
     print(e);
   }
@@ -22,18 +64,18 @@ void tryCatch() {
 
 void simpleTry() {
   try {
-    exception();
+    throwKnown();
   } on FormatException {
     print('Inside format exception');
   }
 }
 
-void exception() {
+void throwKnown() {
   throw FormatException('Formatting is not correct');
 }
 
-void anythingAsEx() {
-  throw 'Throwing any object';
+void throwUnknown() {
+  throw 'Throwing unknown';
 }
 
 double divide(int a, int b) {
