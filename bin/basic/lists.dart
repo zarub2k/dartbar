@@ -1,5 +1,5 @@
 void main(List<String> arugments) {
-  forList();
+  constList();
 }
 
 void forList() {
@@ -30,6 +30,9 @@ void spreadList() {
 
 void constList() {
   var values = const [1, 2, 3];
+  print(values);
+
+  values[3] = 4;
   print(values);
 }
 
