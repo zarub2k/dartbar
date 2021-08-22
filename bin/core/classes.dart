@@ -21,3 +21,13 @@ class Calculator {
     return a / b;
   }
 }
+
+class Player {
+  String? name;
+  String? country;
+
+  Player(String name, String country) {
+    this.name = name;
+    this.country = country;
+  }
+}
