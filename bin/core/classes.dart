@@ -1,7 +1,13 @@
 void main(List<String> args) {
   print('### Classes example ###');
-  var calculator = Calculator();
-  print(calculator.add(4, 5));
+  // var calculator = Calculator();
+  // print(calculator.add(4, 5));
+
+  var player1 = Player('Roger', 'Swiz');
+  var player2 = Player.european('Nadal');
+
+  print('Player 1 --> $player1');
+  print('Player 2 --> $player2');
 }
 
 class Calculator {
@@ -26,8 +32,28 @@ class Player {
   String? name;
   String? country;
 
-  Player(String name, String country) {
-    this.name = name;
-    this.country = country;
-  }
+  //Standard way of constructor
+  // Player(String name, String country) {
+  //   this.name = name;
+  //   this.country = country;
+  // }
+
+  //with syntactic sugar
+  Player(this.name, this.country);
+
+  //Named constructor
+  Player.european(String name)
+    : name = name,
+    country = 'Germany';
+
+  //Redirecting constructor
+  Player.asian(String name) : this(name, 'India');
+}
+
+//Constant constructor example
+class ImmutablePoint {
+  static final ImmutablePoint origin = ImmutablePoint(0, 0);
+
+  final double x, y;
+  const ImmutablePoint(this.x, this.y);
 }
