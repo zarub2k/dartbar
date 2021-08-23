@@ -57,3 +57,16 @@ class ImmutablePoint {
   final double x, y;
   const ImmutablePoint(this.x, this.y);
 }
+
+//Factory class example
+class Logger {
+  final String name;
+
+  static final Map<String, Logger> _cache = {};
+
+  factory Logger(String name) {
+    return _cache.putIfAbsent(name, () => Logger._internal(name));
+  }
+
+  Logger._internal(this.name);
+}
