@@ -8,6 +8,14 @@ void main(List<String> args) {
 
   print('Player 1 --> $player1');
   print('Player 2 --> $player2');
+
+  //Factory constructor
+  var logger = Logger('Factory');
+  logger.log('Factory constructor');
+
+  var logMap = {'name': 'FactoryMap'};
+  var loggerMap = Logger.fromJson(logMap);
+  loggerMap.log('Factory constructor from map');
 }
 
 class Calculator {
@@ -68,5 +76,13 @@ class Logger {
     return _cache.putIfAbsent(name, () => Logger._internal(name));
   }
 
+  factory Logger.fromJson(Map<String, Object> json) {
+    return Logger(json['name'].toString());
+  }
+
   Logger._internal(this.name);
+
+  void log(String message) {
+    print(message);
+  }
 }
