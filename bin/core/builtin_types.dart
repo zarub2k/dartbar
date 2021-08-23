@@ -2,8 +2,8 @@ void main(List<String> args) {
   print('### Built-in Types ###');
 
   // numbers();
-  // strings();
-  boolean();
+  strings();
+  // boolean();
 }
 
 void numbers() {
@@ -25,7 +25,15 @@ void strings() {
     This is a long text. This has multiple
     lines and we can have any number of lines.
   ''';
+
+  var json = '''
+  {
+    'name': 'Roger',
+    'sports': 'Tennis'
+  }
+  ''';
   print(multiline);
+  print(json);
 }
 
 void boolean() {
