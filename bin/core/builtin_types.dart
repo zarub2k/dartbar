@@ -38,7 +38,7 @@ void strings() {
 
 void boolean() {
   var canMove = false;
-  print('Can move: $canMove');
+  print('Value of canMove: $canMove');
   print('Opposite of canMove: ${!canMove}');
 
   if (canMove) {
