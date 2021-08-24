@@ -1,19 +1,21 @@
 void main(List<String> args) {
   print('### Built-in Types ###');
-  numbers();
+  // numbers();
   // strings();
-  // boolean();
+  boolean();
 }
 
 void numbers() {
   var count = 0; //int
   print('++Count ${++count}');
+  print('Type of count: ${count.runtimeType}');
 
   var result = 1 / 2; //double
   print(result);
+  print('Type of result: ${result.runtimeType}');
 
-  num a = 1; //both int and double
-  print(a);
+  num a = 1.0; //both int and double
+  print('Type of a: ${a.runtimeType}');
 }
 
 void strings() {
@@ -36,7 +38,7 @@ void strings() {
 }
 
 void boolean() {
-  var canMove = false;
+  var canMove = true;
   print('Value of canMove: $canMove');
   print('Opposite of canMove: ${!canMove}');
 

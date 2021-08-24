@@ -1,4 +1,4 @@
-void main(List<String> arugments) {
+void main(List<String> args) {
   constList();
 }
 
