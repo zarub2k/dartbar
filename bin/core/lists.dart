@@ -32,8 +32,10 @@ void constList() {
   var values = const [1, 2, 3];
   print(values);
 
-  values[3] = 4;
-  print(values);
+  // values[3] = 4;
+  // print(values);
+
+  assert(values[0] == 2);
 }
 
 void simpleList() {
