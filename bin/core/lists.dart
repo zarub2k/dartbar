@@ -1,5 +1,5 @@
 void main(List<String> args) {
-  constList();
+  simpleList();
 }
 
 void forList() {
