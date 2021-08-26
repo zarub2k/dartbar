@@ -1,6 +1,6 @@
 import 'package:test/test.dart';
 
-void main(List<String> args) {
+void main() {
   print('### Hello world tests ###');
   
   test('Simple hello world test', () {
