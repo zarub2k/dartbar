@@ -1,4 +1,4 @@
-## Dart learning pad
+## Dart Fundamentals
 100 days learning challenge of <code>Dart</code>
 
 ### Unit testing
