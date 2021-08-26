@@ -2,6 +2,11 @@ import 'package:test/test.dart';
 
 void main() {
   print('### Hello world tests ###');
+
+  test('substring validator', () {
+    var s = '123456';
+    print(int.parse(s.substring(3, 3)) + 5);
+  });
   
   test('Simple hello world test', () {
     var name = 'Tham';
