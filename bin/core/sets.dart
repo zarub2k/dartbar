@@ -1,5 +1,19 @@
 void main(List<String> arguments) {
-  basicSet();
+  duplicateSet();
+}
+
+void duplicateSet() {
+  var fruits = {
+    'Banana',
+    'Apple',
+    'Mango'
+  };
+  printSet(fruits);
+
+  //Add a duplicate value
+  var result = fruits.add('Banana');
+  print('Result: $result');
+  printSet(fruits);
 }
 
 void forSet() {
@@ -13,7 +27,7 @@ void forSet() {
     ...fruits,
     for (var i in fruits) '##$i##'
   };
-  print(allSeasons);
+  printSet(allSeasons);
 }
 
 void ifSet() {
@@ -24,12 +38,11 @@ void ifSet() {
   };
 
   var isSummer = false;
-
   var summerFruits = {
     ...fruits,
     if (isSummer) 'Watermelon'
   };
-  print(summerFruits);
+  printSet(summerFruits);
 }
 
 void spreadSet() {
@@ -43,7 +56,7 @@ void spreadSet() {
     'Guava',
     ...fruits
   };
-  print(moreFruits);
+  printSet(moreFruits);
 }
 
 void emptySet() {
@@ -51,12 +64,12 @@ void emptySet() {
   names.add('Tham');
   print(names.single);
 
-  var anotherNames = {
+  var moreNames = {
     'Roger',
     'Joko'
   };
-  names.addAll(anotherNames);
-  print(names);
+  names.addAll(moreNames);
+  printSet(names);
 
   // The below will create map instead of set.
   // Always prefix the type argument for set
