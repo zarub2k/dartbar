@@ -1,9 +1,9 @@
 void main(List<String> args) {
-  simpleList();
+  forList();
 }
 
 void forList() {
-  var values = [1, 2, 3];
+  var values = [1, 5, 3];
   var newValues = [
     ...values,
     for(var i in values) i * 2
@@ -13,7 +13,7 @@ void forList() {
 
 void ifList() {
   var values = [1, 2];
-  var newValues = [...values, if(values.length > 2) 0];
+  var newValues = [...values, if(values.length >= 2) 0];
   print(newValues);
 }
 
@@ -32,10 +32,11 @@ void constList() {
   var values = const [1, 2, 3];
   print(values);
 
-  // values[3] = 4;
-  // print(values);
+  values.add(6);
+  // values[0] = 4;
+  print(values);
 
-  assert(values[0] == 2);
+  // assert(values[0] == 2);
 }
 
 void simpleList() {
@@ -43,7 +44,7 @@ void simpleList() {
   printList(names);
 
   names.add('Nadal');
-  names[0] = 'Feddy';
+  names[0] = 'Fredy';
   printList(names);
 }
 

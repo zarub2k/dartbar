@@ -1,5 +1,5 @@
 void main(List<String> arguments) {
-  forSet();
+  basicSet();
 }
 
 void forSet() {
@@ -70,5 +70,9 @@ void basicSet() {
     'Mango'
   };
 
-  print(fruits.length);
+  printSet(fruits);
+}
+
+void printSet(Set set) {
+  print('Set >> $set \nlength >> ${set.length}');
 }
