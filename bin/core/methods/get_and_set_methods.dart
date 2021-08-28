@@ -1,10 +1,10 @@
 void main(List<String> args) {
   print('### Getter and setter methods ###');
-  var rect = Rectangle(2, 4, 4, 4);
-  print(rect);
-
   var person = Person('Joko', DateTime(1980, 7, 12));
   print('Age of the person: ${person.age}');
+
+  var rect = Rectangle(2, 4, 4, 4);
+  print(rect);
 }
 
 class Person {
