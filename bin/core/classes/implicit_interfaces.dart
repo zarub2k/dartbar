@@ -24,8 +24,11 @@ class Imposter implements Person {
 
 class Person {
   final String _name;
+
+  //Not in the interface since this is a constructor
   Person(this._name);
 
+  //Visible to interface
   String greet(String who) => 'Hello $who, I am $_name';
 }
 
