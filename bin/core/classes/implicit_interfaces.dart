@@ -3,6 +3,14 @@ void main(List<String> args) {
 
   print(greetBob(Person('Tham')));
   print(greetBob(Imposter()));
+  print(greetBob(TennisPlayer('Roger')));
+}
+
+class TennisPlayer extends Person {
+  TennisPlayer(String name): super(name);
+
+  @override
+  String greet(String who) => 'Hey $who, I am $_name';
 }
 
 //Implementation is changed inside greet method
