@@ -5,7 +5,7 @@ void main(List<String> args) {
   print(greetBob(Imposter()));
 }
 
-//Implementation is changed in greet method
+//Implementation is changed inside greet method
 class Imposter implements Person {
   @override
   String greet(String who) => 'Hi $who, Do you who am I?';
