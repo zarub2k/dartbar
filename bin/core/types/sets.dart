@@ -1,5 +1,5 @@
 void main(List<String> arguments) {
-  duplicateSet();
+  basicSet();
 }
 
 void duplicateSet() {
@@ -61,7 +61,7 @@ void spreadSet() {
 
 void emptySet() {
   var names = <String>{};
-  names.add('Tham');
+  names.add('Nadal');
   print(names.single);
 
   var moreNames = {
@@ -84,6 +84,8 @@ void basicSet() {
   };
 
   printSet(fruits);
+  fruits.forEach((fruit) { print(fruit); });
+  // fruits.forEach((fruit) => print(fruit));
 }
 
 void printSet(Set set) {
