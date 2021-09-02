@@ -1,5 +1,5 @@
 void main(List<String> arguments) {
-  basicSet();
+  duplicateSet();
 }
 
 void duplicateSet() {
@@ -11,7 +11,7 @@ void duplicateSet() {
   printSet(fruits);
 
   //Add a duplicate value
-  var result = fruits.add('Banana');
+  var result = fruits.add('Bananaa');
   print('Result: $result');
   printSet(fruits);
 }
@@ -37,7 +37,7 @@ void ifSet() {
     'Mango'
   };
 
-  var isSummer = false;
+  var isSummer = true;
   var summerFruits = {
     ...fruits,
     if (isSummer) 'Watermelon'
