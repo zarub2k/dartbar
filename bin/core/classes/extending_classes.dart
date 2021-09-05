@@ -13,7 +13,6 @@ class Television {
 class SmartTelevision extends Television {
   @override
   void turnOn() {
-    print('>>>');
     super.turnOn();
     print('turnOn smart capabilities');
   }
