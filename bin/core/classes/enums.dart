@@ -27,5 +27,9 @@ void enumInSwitch(Color color) {
     case Color.blue:
       print('Blue color');
       break;
+
+    default:
+      print('Given color is not available!');
+      break;
   }
 }
