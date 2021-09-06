@@ -1,3 +1,5 @@
+// import 'string_ext.dart' hide StringExt;
+
 void main(List<String> args) {
   print('### Extension methods');
   print('5'.parseInt());
