@@ -2,12 +2,21 @@ import 'dart:io';
 
 void main(List<String> args) {
   print('### Stream example ###');
-  simpleStream();
+  withoutStream();
 }
 
 void simpleStream() {
-  var directory = Directory.current;
-  directory.list().listen((entity) {
+  var current = Directory.current;
+  current.list().listen((entity) {
+    if (entity is File) {
+      print(entity.path);
+    }
+  });
+}
+
+void withoutStream() {
+  var current = Directory.current;
+  current.listSync().forEach((entity) {
     if (entity is File) {
       print(entity.path);
     }
