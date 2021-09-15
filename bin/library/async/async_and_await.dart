@@ -1,6 +1,7 @@
-void main(List<String> args) async {
+Future<void> main(List<String> args) async {
   print('### Async and await example ###');
-  print(await createOrder());
+  var order = await createOrder();
+  print('Order is $order');
   print('Order is done');
 }
 
@@ -10,7 +11,8 @@ Future<String> createOrder() async {
 }
 
 Future<String> fetchOrder() {
-  return Future.delayed(Duration(seconds: 2),
+  return Future.delayed(
+      const Duration(seconds: 2),
       () => 'Large Latte'
   );
 }
