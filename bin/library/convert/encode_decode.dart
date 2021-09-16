@@ -2,7 +2,17 @@ import 'dart:convert';
 
 void main(List<String> args) {
   print('### Encoder example ###');
-  decode();
+  encode();
+}
+
+void encode() {
+  var products = [
+    { 'name': 'Orange', 'price': 5 },
+    { 'name': 'Apple', 'price': 8 }
+  ];
+
+  var json = jsonEncode(products);
+  print(json);
 }
 
 void decode() {
